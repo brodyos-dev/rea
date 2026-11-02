@@ -483,7 +483,7 @@ export const readCdpJson = async (
     };
     request_ = request(
       url,
-      { method: "GET", headers: { Accept: "application/json" } },
+      { method: "GET", agent: false, headers: { Accept: "application/json" } },
       (received) => {
         response = received;
         if (settled) {
